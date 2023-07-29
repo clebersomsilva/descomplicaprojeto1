@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">  <!-- idioma da pagina-->
+<head>
+  
+    <meta charset="UTF-8">  <!-- para conjuntos de caracteres universal-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--para a pagina se adequadar altomaticamente 
+        ao tamanho da tela-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>lOJA DE ROUPAS JM</title>
+
+
+    <link rel="stylesheet" href="style.css"> <!-- para mudar a cor css externo-->
+   
+</head>
+<body>
+  
+  
+  <script>const carouselImages = document.querySelectorAll('.carousel-image');
+    const carouselControls = document.querySelectorAll('.carousel-control');
+    
+    let currentImage = 0;
+    
+    function showImage(index) {
+        carouselImages.forEach(image => {
+            image.style.transform = `translateX(-${index * 100}%)`;
+        });
+        carouselControls.forEach(control => {
+            control.classList.remove('active');
+        });
+        carouselControls[index].classList.add('active');
+    }
+    
+    carouselControls.forEach((control, index) => {
+        control.addEventListener('click', () => {
+            currentImage = index;
+            showImage(currentImage);
+        });
+    });
+    
+    setInterval(() => {
+        currentImage = (currentImage + 1) % carouselImages.length;
+    </script>
+    <header class= "container-fluid p-2 background-color: lightblue-bg text-center" >
+        <nav class="navbar navbar-expand-lg  background-color: lightblue-bg ">
+          
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">JM ROUPAS</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end bg-warning" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#">Lançamentos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nacional</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Internacional
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="bi bi-cart"></i></a>
+                  </li>
+                </ul>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+        <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="brasil.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-nome d-md-block">
+      <h5>BRASIL</h5>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <img src="palmeirashd.webp" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-nome d-md-block">
+        <h5>VERDAO</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="palmeirashd2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-nome d-md-block">
+        <h5>PALMEIRAS</h5>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </header>
+ <section class="container-fluid bg-light text-center "> 
+  <br><br><br>
+    <h2>Alguns de nossos clientes </h2> <!--h2 subtitulo-->
+  
+  <!-- alguns de nossos clientes-->
+  <!-- messi-->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 ">
+          <img src="messi.jpg" class="card-img-top" alt="...">
+          <div class="card-body ">
+            <h5 class="card-title">Messi</h5>
+           </div>
+         <h1 class="card-subtitule text-muted">Bailando com os adversarios</h1>
+         <a href="#" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Comprar camiseta do Messi</a>
+          <div class="card-footer">
+          </div>
+        </div>
+      </div>
+
+      <!-- neymar-->
+      <div class="col">
+        <div class="card h-100 ">
+          <img src="neymar.jpg" class="card-img-top" alt="...">
+          <div class="card-body ">
+            <h5 class="card-title">Neymar</h5>
+            <h1 class="card-subtitule text-muted">Toco Neymar é gol</h1>
+              
+            <a href="#" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Comprar camiseta do Ney</a>
+              </div>
+          
+        </div>
+      </div>
+      <!-- kaka-->
+      <div class="col">
+        <div class="card h-100 ">
+          <img src="kaka.jpg" class="card-img-top" alt="...">
+          <div class="card-body ">
+            <h5 class="card-title">kaka</h5>
+            <h1 class="card-subtitule text-muted">Seja um bom rapaz</h1>
+           
+           <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Comprar cammiseta do bom moço</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      </body>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLabel">suas compras</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Produto adcionado ao carrinho
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modasl">Continuar comprando</button>
+        <a href="checkout.html" type="button" class="btn btn-success">finalizar a compra</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+  <br><br><br><br>
+    <div id="quem-somos">
+        <h2>JM Roupas</h2>
+        <p>Somos a inovação em roupas esportivas</p>
+        <img src="jm.jpg" alt="JM ROUPAS">
+    </div>
+
+    <br><br><br><br><br><!-- equipe do trabalho-->
+    <div id="nosso-time">
+        <h2>Nosso Time</h2>
+        <img src="suporte ao cliente.jpg">
+        <h5 class="card-title">Suporte 24horas</h5>
+
+        <br><br><br>
+          <img src="analistadevendas.jpg">
+          <h5 class="card-title">callcenter</h5>
+  
+          <br><br><br>
+          <img src ="liderdevendas.jpg">
+          <h5 class="card-title">Analista de vendas</h5>
+
+          <br><br><br>
+          <img src="importação.jpg">
+          <h5 class="card-title">gerente internacional</h5>
+
+          <br><br><br>
+          <img src="qualidade.jpg">
+          <h5 class="card-title">Controle de qualidade</h5>
+        </div>
+
+    </div>
+    <br><br><br><br><br><!-- produtos -->
+    <div id="nossos-produtos">
+        <h2>Nossos Produtos</h2>
+  
+  
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 ">
+              <img src="santos.webp" class="card-img-top" alt="...">
+              <div class="card-body const [propertyName] = arrayToDestruct;">
+                <h5 class="card-title">Santos</h5>
+                <h1 class="card-subtitule text-muted">R$100,00</h1>
+                
+             </div>
+             <a href="#" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Reservar</a>
+              <div class="card-footer">
+                <small class="text-body-secondary">em ate 24x</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 ">
+              <img src="saopaulo.webp" class="card-img-top" alt="...">
+              <div class="card-body const [propertyName] = arrayToDestruct;">
+                <h5 class="card-title">Tricolor</h5>
+                <h1 class="card-subtitule text-muted">R$ 100,00</h1>
+                  
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" > Reservar</a>
+              </div>
+
+              <div class="card-footer">
+                <small class="text-body-secondary">em ate 24x</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 ">
+              <img src="camiseta.jpg" class="card-img-top" alt="...">
+              <div class="card-body dark">
+                <h5 class="card-title">Emirados</h5>
+                <h1 class="card-subtitule text-muted">R$100,00</h1>
+               
+               <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Reservar</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">em ate 24x</small>
+             
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 ">
+              <img src="retro.jpg" class="card-img-top" alt="...">
+              <div class="card-body dark">
+                <h5 class="card-title">Retro</h5>
+                <h1 class="card-subtitule text-muted">R$100,00</h1>
+               
+               <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Reservar</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">em ate 24x</small>
+             
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 ">
+              <img src="vasco.jpg" class="card-img-top" alt="...">
+              <div class="card-body dark">
+                <h5 class="card-title">Vasco</h5>
+                <h1 class="card-subtitule text-muted">R$100,00</h1>
+               
+               <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Reservar</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">em ate 24x</small>
+             
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col">
+            <div class="card h-100 ">
+              <img src="rakuten.jpg" class="card-img-top" alt="...">
+              <div class="card-body dark">
+                <h5 class="card-title">rakuten</h5>
+                <h1 class="card-subtitule text-muted">R$100,00</h1>
+               
+               <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Reservar</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">em ate 24x</small>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+    
+    
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+          </body>
+    
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="exampleModalLabel">suas compras</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Produto adcionado ao carrinho
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modasl">Continuar comprando</button>
+            <a href="checkout.html" type="button" class="btn btn-success">finalizar a compra</a>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+
+        
+    </div>
+    <div>
+    <footer>
+      <br><br>
+      <h3> Entre em contato:</h3>
+        <p>Endereço: Rua dos caracol,numero:01,Amazonas</p>
+        <p>Telefone: (11) 1234-5678</p>
+        <p>Redes Sociais: @jmroupasesportivas</p>
+    </footer>
+  </div>
+</body>
+</html>
+  </html >
